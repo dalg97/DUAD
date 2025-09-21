@@ -1,0 +1,64 @@
+2. Cree un algoritmo que describa su rutina diaria. Use condiciones, condiciones multiples y ciclos.
+    1. Inicio
+    2. Levantarme a las 7am
+    3. Lavarme los dientes
+    4. Acomodar la cama
+    5. Si tengo jugo de Naranja
+        1. Agarro un vaso del mueble
+        2. Abro la refrigeradora
+        3. Saco el jugo
+        4. Me sirvo el juego
+        5. Guardo el jugo
+        6. Cierro la refrigeradora
+    6. Si no tengo jugo, pero tengo café:
+        1. Enciendo el coffee maker
+        2. Agarro la bolsa de cafe
+        3. Echo dos cucharadas de cafe en el coffee maker
+        4. Agarro una taza
+        5. Echo una taza de agua en el coffee maker
+        6. Pongo a hacer el cafe
+        7. Mientras el cafe no esta listo:
+            1. Pongo música
+    7. Sino:
+        1. Tomo agua
+    8. Si hay pan cuadrado y  hay mantequilla:
+        1. Pongo a tostar pan cuadrado con mantequilla
+    9. Si no hay pan cuadrado y mantequilla, pero si hay frutas:
+        1. Agarro unas frutas
+    10. Sino:
+        1. Pido desayuno por Uber Eats
+        2. Espero que llegue el pedido
+    11. Como el desayuno
+    12. Me conecto al trabajo a las 8am
+    13. Por cada llamada que tengo durante el dia:
+        1. Me pongo el headset
+    14. Si completo mis tareas antes de tiempo:
+        1. Me desconecto
+    15. Si hay una emergencia despues de las 5pm:
+        1. Me tengo que volver a conectar
+        2. Sino:
+            1. Termino mi jornada laboral a las 5pm
+    16. Me baño
+    17. Voy a clases de la universidad a las 6pm
+    18. Me como una merienda durante el receso a las 7:30pm
+    19. Me vuelvo a conectar a clases a las 8pm
+    20. Mientras la clase no termina y tengo hambre:
+        1. Si hay galletas o algo de picar
+            1. Como galletas o algo de picar
+            2. Sino:
+                1. Tomo agua y me espero
+    21. Me desconecto de la clase a las 9pm
+    22. Si hay Carne:
+        1. Cocino carne para la cena
+    23. Si no hay carne pero hay Pollo:
+        1. Cocino pollo para la cena
+    24. Sino:
+        1. Pido UberEats
+        2. Espero que llegue el pedido
+    25. Como la cena
+    26. Lavo los platos
+    27. Mientras los platos esten sucios:
+        1. Los lavo con agua y jabon
+    28. Me lavo los dientes
+    29. Me acuesto a dormir
+    30. Fin
