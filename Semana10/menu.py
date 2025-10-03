@@ -1,7 +1,8 @@
 from actions import *
-from data import export_students,import_students
+from data import *
 
 def show_menu():
+    student_list = []
     print("""
     1. Add a new student
     2. See all students
@@ -12,7 +13,7 @@ def show_menu():
     7. Exit""")
     option = int(input("Enter an option: "))
     if option == 1:
-        add_student()
+        add_student(student_list)
     elif option == 2:
         get_all_students()
     elif option == 3:
