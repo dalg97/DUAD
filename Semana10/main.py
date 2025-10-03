@@ -1,4 +1,5 @@
-from menu import show_menu
+from menu import *
 
 if __name__ == '__main__':
-    show_menu()
+    while True:
+        show_menu()
