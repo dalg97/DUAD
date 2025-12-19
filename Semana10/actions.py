@@ -1,5 +1,5 @@
 def add_student():
-    global student_list
+    student_list = []
     students = {}
     full_name = input("Enter the full name: ")
     section_group = input("Enter the section group: ")

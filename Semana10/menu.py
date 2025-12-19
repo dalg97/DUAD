@@ -26,3 +26,5 @@ def show_menu():
         import_students()
     elif option == 7:
         exit()
+
+show_menu()
