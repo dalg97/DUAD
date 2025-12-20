@@ -1,5 +1,5 @@
+student_list = []
 def add_student():
-    student_list = []
     students = {}
     full_name = input("Enter the full name: ")
     section_group = input("Enter the section group: ")
@@ -13,20 +13,28 @@ def add_student():
     students['spanish_grade'] = spanish_grade
     students['english_grade'] = english_grade
     students['socials_grade'] = socials_grade
-    students['science_grade '] = science_grade
+    students['science_grade'] = science_grade
     students['student_avg_grade'] = total_grade/4
     student_list.append(students)
-    return student_list
+    #return student_list
 
-def get_all_students(student_list):
+def get_all_students():
     for index in student_list:
         for key,value in index.items():
-            print(f"{key}: {value}")
+            if key != 'student_avg_grade':
+                print(f"{key}: {value}")
+        print("---------------")
 
 def get_top_3_students():
-    print("code the logic here")
+    sorted_list = sorted(student_list, key=lambda x: x['student_avg_grade'], reverse=True)
+    top_3 = sorted_list[:3]
+    for student in top_3:
+        for key, value in student.items():
+            if key != 'student_avg_grade':
+                print(f"{key}: {value}")
+        print("---------------")
 
-def get_total_avg(student_list):
+def get_total_avg():
     total_avg = 0
     for index in student_list:
         total_avg += index.get('student_avg_grade')
