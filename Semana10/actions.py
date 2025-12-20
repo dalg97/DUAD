@@ -3,10 +3,10 @@ def add_student():
     students = {}
     full_name = input("Enter the full name: ")
     section_group = input("Enter the section group: ")
-    spanish_grade = int(input("Enter Spanish grade: "))
-    english_grade = int(input("Enter English grade: "))
-    socials_grade = int(input("Enter Socials grade: "))
-    science_grade = int(input("Enter Science grade: "))
+    spanish_grade = verify_grade("Spanish")
+    english_grade = verify_grade("English")
+    socials_grade = verify_grade("Socials")
+    science_grade = verify_grade("Science")
     total_grade = spanish_grade+english_grade+socials_grade+science_grade
     students['full_name'] = full_name
     students['section_group'] = section_group
@@ -16,7 +16,7 @@ def add_student():
     students['science_grade'] = science_grade
     students['student_avg_grade'] = total_grade/4
     student_list.append(students)
-    #return student_list
+    
 
 def get_all_students():
     for index in student_list:
@@ -30,7 +30,7 @@ def get_top_3_students():
     top_3 = sorted_list[:3]
     for student in top_3:
         for key, value in student.items():
-            if key != 'student_avg_grade':
+            if key == 'student_avg_grade' or key == 'full_name':
                 print(f"{key}: {value}")
         print("---------------")
 
@@ -38,4 +38,14 @@ def get_total_avg():
     total_avg = 0
     for index in student_list:
         total_avg += index.get('student_avg_grade')
-    print(f"The Total average is: {total_avg}")
+    total = total_avg / len(student_list)
+    print(f"The Total average is: {total}")
+
+def verify_grade(subject_name):
+    while True:
+        grade = int(input(f"Enter {subject_name} grade: "))
+        if 0 <= grade <= 100:
+            return grade
+        else:
+            print("Grade must be between 0 and 100. Please try again.")
+
