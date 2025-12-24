@@ -1,5 +1,11 @@
 student_list = []
 def add_student():
+    full_name = input("Enter the full name: ")
+    section_group = input("Enter the section group: ")
+    spanish_grade = verify_grade("Spanish")
+    english_grade = verify_grade("English")
+    socials_grade = verify_grade("Socials")
+    science_grade = verify_grade("Science")
     students = {}
     full_name = input("Enter the full name: ")
     section_group = input("Enter the section group: ")
@@ -16,7 +22,6 @@ def add_student():
     students['science_grade'] = science_grade
     students['student_avg_grade'] = total_grade/4
     student_list.append(students)
-    
 
 def get_all_students():
     for index in student_list:
@@ -43,9 +48,12 @@ def get_total_avg():
 
 def verify_grade(subject_name):
     while True:
-        grade = int(input(f"Enter {subject_name} grade: "))
-        if 0 <= grade <= 100:
-            return grade
-        else:
-            print("Grade must be between 0 and 100. Please try again.")
+        try:
+            grade = int(input(f"Enter {subject_name} grade: "))
+            if 0 <= grade <= 100:
+                return grade
+            else:
+                print("Grade must be between 0 and 100. Please try again.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number")
 
