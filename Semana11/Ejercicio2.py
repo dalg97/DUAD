@@ -13,14 +13,11 @@ class Bus:
         else:
             print("Bus is full")
 
-    def remove_passenger(self, name):
-        if len(self.main_bus) > 0:
-            for passenger in self.main_bus:
-                if passenger.name == name:
-                    self.main_bus.remove(passenger)
-                    print("Passenger removed")
-                    return
-            print("Passenger not found")
+    def remove_passenger(self):
+        if self.main_bus:
+            for index in range(len(self.main_bus)):
+                passenger = self.main_bus.pop(0)
+                print(f"Passenger {passenger.name} removed")
         else:
             print("Bus is empty")
 
@@ -42,7 +39,6 @@ bus_1.add_passenger(person_4)
 
 bus_1.show_passengers()
 
-bus_1.remove_passenger(person_2.name)
+bus_1.remove_passenger()
 bus_1.add_passenger(person_4)
-
 bus_1.show_passengers()
