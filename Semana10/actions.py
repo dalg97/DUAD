@@ -7,12 +7,6 @@ def add_student():
     socials_grade = verify_grade("Socials")
     science_grade = verify_grade("Science")
     students = {}
-    full_name = input("Enter the full name: ")
-    section_group = input("Enter the section group: ")
-    spanish_grade = verify_grade("Spanish")
-    english_grade = verify_grade("English")
-    socials_grade = verify_grade("Socials")
-    science_grade = verify_grade("Science")
     total_grade = spanish_grade+english_grade+socials_grade+science_grade
     students['full_name'] = full_name
     students['section_group'] = section_group
