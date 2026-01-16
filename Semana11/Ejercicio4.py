@@ -3,13 +3,12 @@ class Head:
         pass
 
 class Torso:
-    def __init__(self,head,right_arm,left_arm,right_leg,left_leg,feet):
+    def __init__(self,head,right_arm,left_arm,right_leg,left_leg):
         self.head = head
         self.right_arm = right_arm
         self.left_arm = left_arm
         self.right_leg = right_leg
         self.left_leg = left_leg
-        self.feet = feet
 
 class Arm:
     def __init__(self,hand):
@@ -20,10 +19,10 @@ class Hand:
         pass
 
 class Leg:
-    def __init__(self):
-        pass
+    def __init__(self,foot):
+        self.foot = foot
 
-class Feet:
+class Foot:
     def __init__(self):
         pass
 
@@ -31,13 +30,18 @@ class Human:
     def __init__(self,torso):
         self.torso = torso
 
+    def wave_right_hand(self):
+        print("Waving right hand")
+
 head = Head()
 right_hand = Hand() 
 left_hand = Hand()
 right_arm = Arm(right_hand)
 left_arm = Arm(left_hand)
-right_leg = Leg()
-left_leg = Leg()
-feet = Feet()
-torso = Torso(head,right_arm,left_arm,right_leg,left_leg,feet)
+right_foot = Foot()
+left_foot = Foot()
+right_leg = Leg(right_foot)
+left_leg = Leg(left_foot)
+torso = Torso(head,right_arm,left_arm,right_leg,left_leg)
 human = Human(torso)
+human.wave_right_hand()

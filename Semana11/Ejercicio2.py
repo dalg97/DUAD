@@ -4,9 +4,15 @@ class Persona:
         self.age = age
 
 class Bus:
-    max_passengers = 3
-    main_bus = []
+    def __init__(self,max_passengers):
+        self.max_passengers = max_passengers
+        self.main_bus = []
+
     def add_passenger(self, current_passenger):
+        for passenger in self.main_bus:
+            if passenger.name == current_passenger.name:
+                print("Passenger already in the bus")
+                return
         if len(self.main_bus) < self.max_passengers:
             self.main_bus.append(current_passenger)
             print("Passenger added")
@@ -31,7 +37,8 @@ person_3 = Persona("Luis", 28)
 person_4 = Persona("Maria", 22)
 
 
-bus_1 = Bus()
+bus_1 = Bus(3)
+bus_1.add_passenger(person_1)
 bus_1.add_passenger(person_1)
 bus_1.add_passenger(person_2)
 bus_1.add_passenger(person_3)
