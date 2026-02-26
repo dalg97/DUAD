@@ -1,34 +1,23 @@
-class BankAccount:
-    def __init__(self):
-        self.balance = 0
+class Person:
+    def __init__(self,name):
+        self.name  = name
+
+class Worker:
+    def __init__(self,salary):
+        self.salary = salary
+
+class Role:
+    def __init__(self,role_name):
+        self.role_name = role_name
+
+class New_Hire(Person,Worker,Role):
+    def __init__(self, name,salary,role_name):
+        Person.__init__(self,name)
+        Worker.__init__(self,salary)
+        Role.__init__(self,role_name)
     
-    def incoming(self,money):
-        self.balance =+ money
+    def accepted(self):
+        print(f"The application by {self.name} was accepted\nSalary: {self.salary}\nRole: {self.role_name}")
 
-    def outcoming(self,money):
-        if money > self.balance:
-            raise ValueError("There isn't enough to retire")
-        else:
-            self.balance -= money
-
-class SavingsAccount(BankAccount):
-    def __init__(self, balance,min_balance):
-        self.balance = balance
-        self.min_balance = min_balance
-    
-    def outcoming(self,money):
-        if self.balance < self.min_balance:
-            print("You can't retire money, the minimum balance is bigger than balance")
-        else:
-            self.balance -= money
-            print("It was successful")
-
-saving = SavingsAccount(1000,2000)
-saving.outcoming(1000)
-
-
-    
-    
-
-
-
+new_hire1 = New_Hire("Luis",800000,"Engineer")
+new_hire1.accepted()
