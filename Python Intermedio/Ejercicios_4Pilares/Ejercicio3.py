@@ -19,5 +19,5 @@ class New_Hire(Person,Worker,Role):
     def accepted(self):
         print(f"The application by {self.name} was accepted\nSalary: {self.salary}\nRole: {self.role_name}")
 
-new_hire1 = New_Hire("Luis",800000,"Engineer")
-new_hire1.accepted()
+new_hire = New_Hire("Luis",800000,"Engineer")
+new_hire.accepted()
