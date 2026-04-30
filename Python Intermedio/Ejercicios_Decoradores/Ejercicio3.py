@@ -15,13 +15,10 @@ class User:
     
 def decorator1(func):
     def wrapper(User,*args):
-        try:
-            if User.show_date_of_birth < 18:
-                raise ValueError(f"It is less than 18")
-            else:
-                return func(User,*args)
-        except Exception as e:
-            print(e)
+        if User.show_date_of_birth < 18:
+            raise ValueError(f"It is less than 18")
+        else:
+            return func(User,*args)
     return wrapper
 
 @decorator1

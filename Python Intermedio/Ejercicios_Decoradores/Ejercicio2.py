@@ -1,12 +1,9 @@
 def decorator1(func):
     def wrapper(*args):
-        try:
-            for arg in args:
-                if not isinstance(arg, (int,float)):
-                    raise TypeError(f"{arg} is not a number")
-            return func(*args)
-        except Exception as e:
-            print(f"{e}")
+        for arg in args:
+            if not isinstance(arg, (int,float)):
+                raise TypeError(f"{arg} is not a number")
+        return func(*args)
     return wrapper
 
 @decorator1
